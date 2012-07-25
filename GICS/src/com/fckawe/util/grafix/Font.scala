@@ -34,9 +34,7 @@ class Font(bitmapData: Array[Array[Bitmap]], chars: Array[String], width: Int,
     /** TODO: scaladoc
       */
     def hasLowercaseLetters(): Boolean = {
-        chars.foreach(line => {
-            if(line.indexOf('a') >= 0) return true
-        })
+        chars.foreach(line => if(line.indexOf('a') >= 0) return true)
         return false
     }
 
